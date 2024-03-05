@@ -1,0 +1,17 @@
+# get all or perticular element from kubernetes
+    kubectl get (all | pod | replicaset | deploymnet | node ) "name"
+
+# get detailed information of kubernetes element
+    kubectl describe (all | pod | replicaset | deploymnet | node ) "name"
+
+# delete kubernetes element
+    kubectl delete (pod | replicaset | deploymnet | node ) "name"
+
+# create pod with container & also create kubernetes file 
+    kubectl run redis --image=redis_test --=dry-run=client -o yaml > redis.yaml
+
+# create pod with container & also create kubernetes file 
+    kubectl run redis --image=redis_test --=dry-run=client -o yaml > redis.yaml
+
+    
+
