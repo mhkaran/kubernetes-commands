@@ -1,0 +1,34 @@
+# get all or perticular element from kubernetes
+    kubectl get (all | pod | replicaset | deploymnet | node ) "name"
+
+# get detailed information of kubernetes element
+    kubectl describe (all | pod | replicaset | deploymnet | node ) "name"
+
+# delete kubernetes element
+    kubectl delete (pod | replicaset | deploymnet | node ) "name"
+
+# create pod with container & also create kubernetes file 
+    kubectl run redis --image=redis_test --=dry-run=client -o yaml > redis.yaml
+
+# run above file and craete pod 
+    kubectl create -f  redis.yaml
+
+# update above file & apply those changes 
+    kubectl apply -f  redis.yaml
+
+# If you are not given a pod definition file, you may extract the definition to a file using the below command
+    kubectl get pod "name" -o yaml > pod-definition.yaml
+
+# To modify the properties of the pod on command line, only the properties listed below are editable.
+    spec.containers[*].image
+    spec.initContainers[*].image
+    spec.activeDeadlineSeconds
+    spec.tolerations
+    spec.terminationGracePeriodSeconds
+    
+    kubectl edit pod "name" 
+
+
+
+    
+

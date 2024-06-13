@@ -1,0 +1,17 @@
+# Node is virtual or physical machines where kubernetes installed, we called it worker node or minions
+# Below are the main components of kubernetes
+       - API Server : is a front face, user interface, device management, command line interface all talk to API Server. (master)
+       - etcd : distributed reliable key value store to manage the cluster, it's manage & implement the logs across across the cluster to insure no conflict btween master. (master)
+       - scheduler : distributing work across the multiple nodes. (master)
+       - controller : brain behind the orchestration, it's noticing & respinding when node, container or end point down, it takes decision to brign up new container. (master)
+       - container runtime : underlying software to run the container. (worker)
+       - kubelet : is an agent to run on each node, ensure containers are running as expected.  (worker)
+# Pod is samllest object in kubernetes, It contains all the required components which are essential to run the specific task or application. Pod should be one container ideally but
+  we can use multiple containers if required.
+# below are the main elements of kubernetes file
+       apiVersion: (POD | Service : v1 & ReplicaSet | Deployment : apps/v1)
+       kind:       
+       metadata:
+       spec:
+       
+ 
